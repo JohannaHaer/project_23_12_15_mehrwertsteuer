@@ -9,8 +9,8 @@
 <body>
     <h1>Mehrwertsteuer-Rechner</h1>
     <section>
-        <form onsubmit="calc(); return false" onclick="label(); return false">
-            <div>
+        <form onsubmit="calc(); return false">
+            <div oninput="label(); return false">
                 <h3>Was soll berechnet werden?</h3>
                 <div>
                     <input type="radio" name="mehrwert" id="netto" required>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div>
-                <label for="betrag" id="text"><span>*</span></label>
+                <label for="betrag" id="text">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label><span>*</span>
                 <input type="number" name="betrag" id="betrag" required>
             </div>
             <input type="submit" value="Berechnen">
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div>
-            <p id="labelPreis"></p>
+            <p id="labelPreis">Nettobetrag</p>
             <div>
                 <p>€</p>
                 <p id="output2"></p>

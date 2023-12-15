@@ -1,3 +1,131 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  text-decoration: none;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: lightblue;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  padding: 2rem;
+  background-color: white;
+  width: 35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+form .mwStAngabe {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: lightgray;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+  accent-color: blue;
+}
+form .steuersatz {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: lightgray;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+  accent-color: blue;
+}
+form .eingabe {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+  background-color: lightgray;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+}
+form .eingabe span {
+  color: rgb(177, 4, 4);
+}
+form .eingabe input {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.564);
+  border: none;
+  border-radius: 5px;
+}
+form .button {
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 7px;
+  background-color: blue;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.ergebnis {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+.ergebnis h2 {
+  color: blue;
+}
+.ergebnis div {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  gap: 1.2rem;
+  background-color: lightgray;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.ergebnis div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 1.2rem;
+}
 
 /*# sourceMappingURL=style.css.map */

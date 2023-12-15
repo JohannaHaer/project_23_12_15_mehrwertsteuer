@@ -10,7 +10,7 @@
     <h1>Mehrwertsteuer-Rechner</h1>
     <section>
         <form onsubmit="calc(); return false">
-            <div oninput="label(); return false">
+            <div oninput="label(); return false" class="mwStAngabe">
                 <h3>Was soll berechnet werden?</h3>
                 <div>
                     <input type="radio" name="mehrwert" id="netto" required>
@@ -21,7 +21,7 @@
                     <label for="mehrwert">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
                 </div>
             </div>
-            <div>
+            <div class="steuersatz">
                 <h3>Mehrwertsteuersatz</h3>
                 <div>
                     <input type="radio" name="steuer" id="neunzehn" required>
@@ -32,26 +32,31 @@
                     <label for="steuer">7 %</label>
                 </div>
             </div>
-            <div>
-                <label for="betrag" id="text">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label><span>*</span>
+            <div class="eingabe">
+                <div>
+                    <label for="betrag" id="text">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</label>
+                    <span>*</span>
+                </div>
                 <input type="number" name="betrag" id="betrag" required>
             </div>
-            <input type="submit" value="Berechnen">
+            <input type="submit" value="Berechnen" class="button">
         </form>
         <hr>
-        <h2>Ergebnis</h2>
-        <div>
-            <p>Mehrwertsteuerbetrag</p>
+        <div class="ergebnis">
+            <h2>Ergebnis</h2>
             <div>
-                <p>€</p>
-                <p id="output1"></p>
+                <p>Mehrwertsteuerbetrag</p>
+                <div>
+                    <p>€</p>
+                    <p id="output1"></p>
+                </div>
             </div>
-        </div>
-        <div>
-            <p id="labelPreis">Nettobetrag</p>
             <div>
-                <p>€</p>
-                <p id="output2"></p>
+                <p id="labelPreis">Nettobetrag</p>
+                <div>
+                    <p>€</p>
+                    <p id="output2"></p>
+                </div>
             </div>
         </div>
     </section>

@@ -6,10 +6,10 @@ let label = () => {
     let labelPreis = document.querySelector("#labelPreis")
 
     if (nettoLabel) {
-        labelPreis.innerHTML = `Nettobetrag`
+        labelPreis.innerHTML = `Bruttobetrag (Endpreis)`
         labelText.innerHTML = `Nettobetrag (Preis ohne Mehrwertsteuer) in Euro`
     } else if (bruttoLabel) {
-        labelPreis.innerHTML = `Bruttobetrag (Endpreis)`
+        labelPreis.innerHTML = `Nettobetrag`
         labelText.innerHTML = `Bruttobetrag (Preis mit Mehrwertsteuer) in Euro`
     }
 }
@@ -33,16 +33,16 @@ let calc = () => {
 
 
     if (netto && neunzehn) {
-        output1.innerHTML = bruttoZuNetto19mwSt
-        output2.innerHTML = bruttoZuNetto19
-    } else if (netto && sieben) {
-        output1.innerHTML = bruttoZuNetto7mwSt
-        output2.innerHTML = bruttoZuNetto7
-    } else if (brutto && neunzehn) {
         output1.innerHTML = nettoZuBrutto19mwSt
         output2.innerHTML = nettoZuBrutto19
-    } else if (brutto && sieben) {
+    } else if (netto && sieben) {
         output1.innerHTML = nettoZuBrutto7mwSt
         output2.innerHTML = nettoZuBrutto7
+    } else if (brutto && neunzehn) {
+        output1.innerHTML = bruttoZuNetto19mwSt
+        output2.innerHTML = bruttoZuNetto19
+    } else if (brutto && sieben) {
+        output1.innerHTML = bruttoZuNetto7mwSt
+        output2.innerHTML = bruttoZuNetto7
     }
 }

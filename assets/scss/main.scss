@@ -1,0 +1,101 @@
+@use '_font' as fonts;
+@use '_mixin' as mixins;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    text-decoration: none;
+}
+
+body {
+    @include mixins.flex(flex, column, center, center, 1rem);
+    background-color: lightblue;
+    height: 100vh;
+}
+
+section {
+    @include mixins.flex(flex, column, center, center, 1rem);
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    padding: 2rem;
+    background-color: white;
+    width: 35%;
+}
+
+form {
+    @include mixins.flex(flex, column, center, center, 1rem);
+    width: 100%;
+
+    .mwStAngabe {
+        @include mixins.flex(flex, column, left, center, 1.2rem);
+        background-color: lightgray;
+        padding: 0.5rem;
+        border-radius: 7px;
+        width: 100%;
+        accent-color: blue;
+    }
+
+    .steuersatz {
+        @include mixins.flex(flex, column, left, center, 1.2rem);
+        background-color: lightgray;
+        padding: 0.5rem;
+        border-radius: 7px;
+        width: 100%;
+        accent-color: blue;
+    }
+
+    .eingabe {
+        @include mixins.flex(flex, column, left, center, 1rem);
+        background-color: lightgray;
+        padding: 0.5rem;
+        border-radius: 7px;
+        width: 100%;
+
+        span {
+            color: rgb(177, 4, 4);
+        }
+
+        input {
+            width: 50%;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.564);
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+    .button {
+        padding: 1rem 2rem;
+        width: 100%;
+        border-radius: 7px;
+        background-color: blue;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+.ergebnis {
+    @include mixins.flex(flex, column, left, center, 1rem);
+    width: 100%;
+
+    h2 {
+        color: blue;
+    }
+
+    div {
+        @include mixins.flex(flex, column, left, center, 1.2rem);
+        background-color: lightgray;
+        padding: 0.5rem;
+        border-radius: 7px;
+        width: 100%;
+        font-size: 1.2rem;
+
+        div {
+            @include mixins.flex(flex, row, center, left, 1.2rem);
+        }
+    }
+}

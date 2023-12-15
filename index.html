@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Mehrwertsteuer-Rechner</title>
 </head>
 <body>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <section>
+        <form onsubmit="calc(); return false" onclick="label(); return false">
+            <div>
+                <h3>Was soll berechnet werden?</h3>
+                <div>
+                    <input type="radio" name="mehrwert" id="netto" required>
+                    <label for="mehrwert">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+                </div>
+                <div>
+                    <input type="radio" name="mehrwert" id="brutto" required>
+                    <label for="mehrwert">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+                </div>
+            </div>
+            <div>
+                <h3>Mehrwertsteuersatz</h3>
+                <div>
+                    <input type="radio" name="steuer" id="neunzehn" required>
+                    <label for="steuer">19 %</label>
+                </div>
+                <div>
+                    <input type="radio" name="steuer" id="sieben" required>
+                    <label for="steuer">7 %</label>
+                </div>
+            </div>
+            <div>
+                <label for="betrag" id="text"><span>*</span></label>
+                <input type="number" name="betrag" id="betrag" required>
+            </div>
+            <input type="submit" value="Berechnen">
+        </form>
+        <hr>
+        <h2>Ergebnis</h2>
+        <div>
+            <p>Mehrwertsteuerbetrag</p>
+            <div>
+                <p>€</p>
+                <p id="output1"></p>
+            </div>
+        </div>
+        <div>
+            <p id="labelPreis"></p>
+            <div>
+                <p>€</p>
+                <p id="output2"></p>
+            </div>
+        </div>
+    </section>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

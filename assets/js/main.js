@@ -22,10 +22,12 @@ let calc = () => {
     let neunzehn = document.querySelector("#neunzehn").checked
     let sieben = document.querySelector("#sieben").checked
     let betrag = document.querySelector("#betrag").value
+
     let nettoZuBrutto19 = (betrag * 1.19).toFixed(2)
     let bruttoZuNetto19 = (betrag / 1.19).toFixed(2)
     let nettoZuBrutto7 = (betrag * 1.07).toFixed(2)
     let bruttoZuNetto7 = (betrag / 1.07).toFixed(2)
+    
     let nettoZuBrutto19mwSt = (nettoZuBrutto19 - betrag).toFixed(2)
     let bruttoZuNetto19mwSt = (bruttoZuNetto19 * 0.19).toFixed(2)
     let nettoZuBrutto7mwSt = (nettoZuBrutto7 - betrag).toFixed(2)
